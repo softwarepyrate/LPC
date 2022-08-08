@@ -6,7 +6,7 @@ cd LPC
 
 pip install virtualenv
 
-virtualenv seven --python=python3.9.13
+python -m virtualenv seven --python=python3.9.13
 
 :: python -m venv seven
 
