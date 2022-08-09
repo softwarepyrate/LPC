@@ -1,4 +1,6 @@
-WINDOWS:
+INSTALL FILES ARE LOCATED IN install_files
+
+WINDOWS: - windows_install.bat
 Install process
 
 install git for windows https://gitforwindows.org/
@@ -12,7 +14,9 @@ paste this command in command prompt "git clone https://github.com/softwarepyrat
 run "LPC_install.bat" in an elevated command prompt
 Install complete
 
-UBUNTU 22.04 LTS:
+
+
+UBUNTU 22.04 LTS: - linux_install.sh
 Install process
 
 sudo apt install git -y
