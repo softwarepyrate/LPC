@@ -8,9 +8,8 @@ install python 3.9.13 https://www.python.org/downloads/release/python-3913/
 install microsoft C++ build tools if Visual Studio is not installed https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Community&channel=Release&version=VS2022&source=VSLandingPage&cid=2030&passive=false
 When installer is open, click the "C++ tools for desktop" option
 Restart windows
-Create new folder in Documents called "ANPR"
-Navigate to it open the cmd inside the folder.
-paste this command in command prompt "git clone https://github.com/softwarepyrate/LPC_install.git ."
+Navigate to where you wish to store the program and open a cmd prompt
+paste this command in command prompt "git clone https://github.com/softwarepyrate/LPC_install.git"
 run "LPC_install.bat" in an elevated command prompt
 Install complete
 
@@ -22,9 +21,7 @@ Install process
 sudo apt install git -y
 sudo apt update && sudo apt upgrade -y
 sudo reboot
-navigate to where you want to install the program and create a new folder called ANPR
-mkdir ANPR
-cd ANPR
-git clone https://github.com/softwarepyrate/LPC_install.git .
+navigate to where you want to install the program and open the terminal
+git clone https://github.com/softwarepyrate/LPC_install.git
 source install.sh
 Install complete
