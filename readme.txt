@@ -1,3 +1,5 @@
+WINDOWS:
+
 Install process
 
 install git for windows https://gitforwindows.org/
@@ -19,3 +21,14 @@ paste this command in command prompt "git clone https://github.com/softwarepyrat
 run "LPC_install.bat" in and elevated command prompt
 
 Install complete
+
+UBUNTU:
+
+sudo apt install git -y
+sudo apt-get update && sudo apt-get upgrade -y
+sudo reboot
+navigate to where you want to install the program and create a new folder called ANPR
+mkdir ANPR
+cd ANPR
+git clone https://github.com/softwarepyrate/LPC_install.git .
+source install.sh
