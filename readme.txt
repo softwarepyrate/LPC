@@ -9,7 +9,7 @@ install microsoft C++ build tools if Visual Studio is not installed https://visu
 When installer is open, click the "C++ tools for desktop" option
 Restart windows
 Navigate to where you wish to store the program and open a cmd prompt
-paste this command in command prompt "git clone https://github.com/softwarepyrate/LPC_install.git"
+paste this command in command prompt "git clone https://github.com/softwarepyrate/LPC.git"
 run "LPC_install.bat" in an elevated command prompt
 Install complete
 
@@ -22,6 +22,6 @@ sudo apt install git -y
 sudo apt update && sudo apt upgrade -y
 sudo reboot
 navigate to where you want to install the program and open the terminal
-git clone https://github.com/softwarepyrate/LPC_install.git
+git clone https://github.com/softwarepyrate/LPC.git
 source install.sh
 Install complete
