@@ -2,7 +2,8 @@
 
 sudo apt update && sudo apt upgrade -y
 sudo apt install software-properties-common -y
-python3 -m pip install --upgrade pip
+#python3 -m pip install --upgrade pip
+sudo apt install python3-pip --upgrade -y
 sudo add-apt-repository ppa:deadsnakes/ppa
 sudo apt update
 sudo apt install python3.9 -y
@@ -10,7 +11,7 @@ sudo apt install python3.9-venv -y
 sudo apt install python3.9-distutils -y
 sudo apt install python3.9-dev -y
 sudo apt install python3.9-tk -y
-cd ..
+#cd ..
 python3.9 -m venv seven
 source seven/bin/activate
 pip install --upgrade pip

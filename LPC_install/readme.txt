@@ -25,5 +25,6 @@ sudo apt update && sudo apt upgrade -y
 sudo reboot
 navigate to where you want to install the program and open the terminal
 git clone https://github.com/softwarepyrate/LPC.git
-source install.sh
+cd LPC
+source ./LPC_install/install.sh
 Install complete
