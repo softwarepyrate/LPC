@@ -9,8 +9,10 @@ install microsoft C++ build tools if Visual Studio is not installed https://visu
 When installer is open, click the "C++ tools for desktop" option
 Restart windows
 Navigate to where you wish to store the program and open a cmd prompt
-paste this command in command prompt "git clone https://github.com/softwarepyrate/LPC.git"
-run "LPC_install.bat" in an elevated command prompt
+paste this command in command prompt and press enter:
+
+ " git clone https://github.com/softwarepyrate/LPC.git && %CD%\LPC\LPC_install\windows_install.bat "
+
 Install complete
 
 
