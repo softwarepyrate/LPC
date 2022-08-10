@@ -26,5 +26,5 @@ sudo reboot
 navigate to where you want to install the program and open the terminal
 git clone https://github.com/softwarepyrate/LPC.git
 cd LPC
-source ./LPC_install/install.sh
+source ./LPC_install/linux_install.sh
 Install complete
