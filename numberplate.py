@@ -59,12 +59,12 @@ files = {
     'LABELMAP': os.path.join(paths['ANNOTATION_PATH'], LABEL_MAP_NAME)
 }
 
-# for path in paths.values():
-    # if not os.path.exists(path):
-        # if os.name == 'posix':
-            # get_ipython().system('mkdir -p {path}')
-        # if os.name == 'nt':
-            # get_ipython().system('mkdir {path}')
+for path in paths.values():
+    if not os.path.exists(path):
+        if os.name == 'posix':
+            get_ipython().system('mkdir -p {path}')
+        if os.name == 'nt':
+            get_ipython().system('mkdir {path}')
 
 
 
@@ -192,7 +192,7 @@ def numberplate_recognition():
 
     final_numberplate=text[0]
     
-    disallowed_characters = ",'.-_"
+    disallowed_characters = ".-_"
 
     for character in disallowed_characters:
         final_numberplate = final_numberplate.replace(character, "")
