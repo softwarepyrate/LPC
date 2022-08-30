@@ -5,7 +5,7 @@ Install process
 
 install git for windows https://gitforwindows.org/
 install python 3.9.13 https://www.python.org/downloads/release/python-3913/
-install microsoft C++ build tools if Visual Studio is not installed https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Community&channel=Release&version=VS2022&source=VSLandingPage&cid=2030&passive=false
+install microsoft C++ build tools https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Community&channel=Release&version=VS2022&source=VSLandingPage&cid=2030&passive=false
 When installer is open, click the "C++ tools for desktop" option
 Restart windows
 Navigate to where you wish to store the program and open a cmd prompt
