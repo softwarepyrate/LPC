@@ -105,12 +105,12 @@ def save_datetime(number_plate, direction):
         test_connect.commit()
 
         # Feedback in Python
-        print("Number plate" + number_plate + " 's entry time has been saved into database")
+        print("Number plate " + number_plate + "'s entry time has been saved into database")
 
         return formatted_datetime
 
     else:
-        test_cursor.execute('UPDATE Test SET Exit_Time = %s WHERE Number = %s',
+        test_cursor.execute('UPDATE Test SET Exit_Time = %s WHERE Number = %s and Exit_Time is NULL',
                             (formatted_datetime, number_plate))
 
         # Save the execution
@@ -135,10 +135,10 @@ def export_entry_datetime(number_plate):
     :param number_plate: String, vehicle's number plate reading
     :return: Python Datatime object for calculation
     """
-    test_cursor = test_connect.cursor()
+    test_cursor = test_connect.cursor(buffered=True)
     # Execute the statement
-    #test_cursor.execute("SELECT Entry_Time FROM Test WHERE Number = %s and Exit_Time is null", (number_plate,))
     test_cursor.execute("SELECT Entry_Time FROM Test WHERE Number = %s", (number_plate,))
+    #test_cursor.execute("SELECT Entry_Time FROM Test WHERE Number = %s ", (number_plate,))
 
     # Get the output from query
     test_str = str(test_cursor.fetchone())
