@@ -1,3 +1,4 @@
+import os
 from datetime import datetime
 
 import mysql.connector
@@ -68,8 +69,15 @@ def export_report(calendar_date):
 
         filename = calendar_date + '-report_' + filename_timestamp + '.txt'
 
+        # Create "report" folder
+        directory = './report/'
+
+        file_path = os.path.join(directory, filename)
+        if not os.path.isdir(directory):
+            os.mkdir(directory)
+
         # Save the report by using external package - tabulate
-        with open(filename, 'w') as f:
+        with open(file_path, 'w') as f:
             f.write(
                 tabulate(carpark_report, headers=['ID', 'Number Plate', 'Entry Time', 'Exit Time'], tablefmt='psql'))
 
@@ -110,7 +118,7 @@ def save_datetime(number_plate, direction):
         return formatted_datetime
 
     else:
-        test_cursor.execute('UPDATE Test SET Exit_Time = %s WHERE Number = %s and Exit_Time is NULL',
+        test_cursor.execute('UPDATE Test SET Exit_Time = %s WHERE Number = %s AND Exit_Time IS NULL',
                             (formatted_datetime, number_plate))
 
         # Save the execution
@@ -136,9 +144,9 @@ def export_entry_datetime(number_plate):
     :return: Python Datatime object for calculation
     """
     test_cursor = test_connect.cursor(buffered=True)
+
     # Execute the statement
-    test_cursor.execute("SELECT Entry_Time FROM Test WHERE Number = %s", (number_plate,))
-    #test_cursor.execute("SELECT Entry_Time FROM Test WHERE Number = %s ", (number_plate,))
+    test_cursor.execute("SELECT Entry_Time FROM Test WHERE Number = %s ORDER BY ID DESC LIMIT 1;", (number_plate,))
 
     # Get the output from query
     test_str = str(test_cursor.fetchone())
