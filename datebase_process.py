@@ -137,7 +137,8 @@ def export_entry_datetime(number_plate):
     """
     test_cursor = test_connect.cursor()
     # Execute the statement
-    test_cursor.execute("SELECT Entry_Time FROM Test WHERE Number = %s and Exit_Time is null", (number_plate,))
+    #test_cursor.execute("SELECT Entry_Time FROM Test WHERE Number = %s and Exit_Time is null", (number_plate,))
+    test_cursor.execute("SELECT Entry_Time FROM Test WHERE Number = %s", (number_plate,))
 
     # Get the output from query
     test_str = str(test_cursor.fetchone())
