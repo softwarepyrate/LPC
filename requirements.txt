@@ -4,7 +4,6 @@ mysql
 mysql-connector-python
 tabulate
 
-
 absl-py==1.2.0
 apache-beam==2.40.0
 astroid==2.12.2
