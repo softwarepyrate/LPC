@@ -148,7 +148,7 @@ def numberplate_recognition(loaded_image):
         # #print(result[1])
     
     
-    region_threshold = 0.6
+    region_threshold = 0.06
     
     def filter_text(region, ocr_result, region_threshold):
         rectangle_size = region.shape[0]*region.shape[1]
