@@ -1,9 +1,11 @@
-##########################################################
-# Version 1.0 - Matt
-#
-# Version 2.1 - Chen - removed "%CD%/.." line
-#
-##########################################################
+::=================================================================================
+::Version 1.0 - Matt
+::
+::Version 2.1 - Chen - removed "%CD%/.." line
+::
+::Version 2.2 - Chen - Updated version control format, add wget package in line 18 
+::
+::=================================================================================
 
 @echo on
 
@@ -13,6 +15,4 @@ pip install virtualenv
 
 python -m virtualenv seven --python=python3.9.13
 
-:: python -m venv seven
-
-.\seven\Scripts\activate && pip install ipython && ipython install.py
+.\seven\Scripts\activate && pip install ipython wget && ipython install.py
