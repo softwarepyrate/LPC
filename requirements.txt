@@ -1,7 +1,7 @@
 tkcalendar
-mysqlclient
-mysql-connector-python
-#mysql
+mysqlclient==2.1.1
+mysql-connector-python==8.0.30
+mysql==0.0.3
 
 absl-py==1.2.0
 apache-beam==2.40.0
