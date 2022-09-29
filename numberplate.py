@@ -110,7 +110,8 @@ def numberplate_recognition(loaded_image):
     # for result in ocr_result:
     # #print(np.sum(np.subtract(result[0][2],result[0][1])))
     # #print(result[1])
-
+    
+    # updated this value from 0.06 for better detection results
     region_threshold = 0.06
 
     def filter_text(region, ocr_result, region_threshold):
